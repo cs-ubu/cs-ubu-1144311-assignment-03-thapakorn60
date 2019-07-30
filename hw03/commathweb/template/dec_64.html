@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+
+{% block content %}
+
+    <section class="headline-sec">
+        <div class="overlay ">
+          <section class="headline-sec">
+                  <center>
+                  <div class="overlay ">
+                  
+
+                  <div class="jumbotron text-center">
+                            <h1>แปลงเลขทศนิยมเป็น เลข 64 บิต (Decimal to IEEE 64 bit)</h1>
+                  </div>
+
+                    
+                    <hr>
+                    <form action="" method="post">
+                    {% csrf_token %}
+                    <label for="exampleFormControlFile1" class="pull-left" style="text-align:left;">ใส่ตัวเลขที่ต้องการเเปลง</label>
+                    
+                    <div class="col-md-10 align-items-center justify-content-center">
+                      <input class="form-control" name="x" type="number" placeholder="กรอกตัวเลข" step="any" min="0" max="9999999"  value="{{d}}" required>
+                      <br>
+                    </div>
+                    
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <button type="submit" class="btn btn-outline-primary"> แปลงค่า</button>
+                    </form>
+                    <br>
+                    <div class="col-md-10">
+                      <div class="row justify-content-center align-items-center">
+                        <div class="alert alert-success">
+                          <br>
+                          <h4>
+                            <b>number :</b> {{ d }}
+                            <br>
+                            <b>Answe :</b> {{ f }}
+                          </h4>
+                          <br>
+                          <br>
+
+                        </div>
+                      </div>
+                       <button type="button" class="btn btn-outline-success" onclick="window.location.href='http://127.0.0.1:8000/'"><h1>HOME</h1></button>
+
+                    </div>
+                  </div>
+                  </center>
+          </section>
+        </div>
+    </section>
+{% endblock content %}
+ </body>
+</html>
+    

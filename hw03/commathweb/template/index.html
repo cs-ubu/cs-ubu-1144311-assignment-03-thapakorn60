@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title> Commath </title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+{% block content %}
+<section id="home-sec">
+
+            <div class="jumbotron text-center">
+             <h1>Computational Mathematics</h1>
+            </div>
+    
+</section>
+<section >
+  <br>
+  <br>
+    
+            <center>
+
+                <button type="button" class="btn btn-warning" onclick="window.location.href = '/dec_32'"><h3> แปลงเลขทศนิยมเป็น <br> IEEE floating point single precision (32-bit)</h3></button>
+                <br>
+                </br>
+                <p><button type="button" class="btn btn-warning" onclick="window.location.href = '/dec_64'"><h3> แปลงเลขทศนิยมเป็น <br> IEEE floating point single precision (64-bit)</h3></button></p>
+            
+                <p><button type="button" class="btn btn-warning" onclick="window.location.href = '/solve'"><h3>แก้ระบบสมการเชิงเส้น <br> $Ax = b$</h3></button></p>
+            
+            </center>
+        
+</section>
+
+{% endblock content %}
+</body>
+</html>
